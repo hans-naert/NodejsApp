@@ -1,9 +1,7 @@
-var http = require('http');
-var dt = require('./myfirstmodule.js');
-var fs = require('fs');
-
-(async () => {
-    uc = await import('upper-case');
+import * as http from 'http';
+import * as dt from './myfirstmodule.cjs';
+import * as fs from 'fs';
+import * as uc from 'upper-case';
 
     http.createServer(function (req, res) {
         fs.readFile('demofile1.html', function (err, data) {
@@ -16,4 +14,3 @@ var fs = require('fs');
     }).listen(8080);
 
     console.log("einde programma aangepast")
-})();
